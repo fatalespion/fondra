@@ -22,6 +22,30 @@ local Window 													= Library:CreateWindow({
     MenuFadeTime 												= 0.1
 })
 
+task.spawn(function()
+	local ScreenGui = Instance.new("ScreenGui")
+	local TextLabel = Instance.new("TextLabel")
+
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.DisplayOrder = 99999999
+	ScreenGui.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+
+	TextLabel.Parent = ScreenGui
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.BorderSizePixel = 0
+	TextLabel.Position = UDim2.new(0.411014497, 0, 0.00926879514, 0)
+	TextLabel.Size = UDim2.new(0.188985512, 0, 0.0216271877, 0)
+	TextLabel.Font = Enum.Font.SourceSansBold
+	TextLabel.Text = "Fondra [V4] - FIXED BY FATAL {Old Modules}"
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextStrokeTransparency = 0.000
+	TextLabel.TextWrapped = true
+end)
+
 local Main 														= Window:AddTab("Main") do
 	local RageBot 												= Main:AddLeftGroupbox("RageBot") do
         RageBot:AddToggle("RageBot", {
