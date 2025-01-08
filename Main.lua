@@ -7,6 +7,8 @@ Fondra.Functions.ClearConnection("VPart Added", Fondra.Connections)
 Fondra.Functions.ClearConnection("Mouse Move", Fondra.Connections)
 Fondra.Functions.ClearConnection("Main", Fondra.Connections)
 
+warn("LOAD1")
+
 local IsA                                                       = game.IsA
 local GetChildren                                               = game.GetChildren
 local WaitForChild                                              = game.WaitForChild
@@ -226,6 +228,7 @@ Fondra.Functions.ForceFieldCheck                                = function(Chara
 
 	return FindFirstChildWhichIsA(Character, "ForceField") ~= nil
 end
+warn("LOAD2")
 
 Fondra.Functions.DownedCheck                                    = function(Character)
 	if not FindFirstChild(Fondra.Services.ReplicatedStorage.CharStats, Character.Name) then return true end
@@ -393,6 +396,8 @@ Fondra.Functions.ReturnCrate                                    = function(Max)
 
 	return Crate
 end
+
+warn("LOAD2")
 
 Fondra.Functions.ReturnTool                                     = function(Max)
 	local Tool                                                  = nil
@@ -595,6 +600,8 @@ Fondra.Functions.Raycast										= function(Origin, Direction, Blacklist)
 		return false
 	end
 end
+
+warn("LOAD3")
 
 Fondra.Functions.Return                                         = function(Methods, Checks, Lengths, Limbs)
 	local Methods                                               = Methods or { Get = "Character", Part = "Random", Visible = "Default" }
@@ -831,6 +838,8 @@ Fondra.Functions.Fly                                            = function(Clien
 	end
 end
 
+warn("LOAD4")
+
 Fondra.Functions.SpinBot                                        = function(Client, Character)
 	if not Client then return end
 	if not Character then return end
@@ -1058,6 +1067,8 @@ Fondra.Functions.AutoBreakDoors                                 = function(Clien
 
 	Fondra.Cooldowns.BreakDoors                                 = false
 end
+
+warn("LOAD5")
 
 Fondra.Functions.AutoBreakSafes                                 = function(Client, Character)
 	if not Toggles.BreakSafes.Value then return end
@@ -1288,6 +1299,8 @@ Fondra.Functions.MeleeAura                                      = function(Clien
 	Fondra.Cooldowns.MeleeAura                                  = false
 end
 
+warn("LOAD6")
+
 Fondra.Functions.FinishAura                                     = function(Client, Character)
 	if not Client then return end
 	if not Character then return end
@@ -1511,6 +1524,8 @@ local Namecall; Namecall                                        = hookmetamethod
 
 	return Namecall(Self, unpack(Arguments))
 end)
+
+warn("LOAD7")
 
 local NewIndex; NewIndex										= hookmetamethod(game, "__newindex", function(Self, Index, Value)
 	local Name 													= tostring(Self)
@@ -1809,3 +1824,4 @@ end)
 Library:Notify(string.format("Loaded Main.lua in %.4f MS", tick() - Fondra.Data.Start))
 Library.SaveManager:LoadAutoloadConfig()
 -- #EndRegion
+warn("LOAD9")
