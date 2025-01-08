@@ -15,7 +15,7 @@ do
 end
 
 local Window 													= Library:CreateWindow({
-    Title 														= "Fondra - V4",
+    Title 														= "Fondra - V4 [FIXED BY FATAL]",
     Center 														= true,
     AutoShow 													= true,
     TabPadding 													= 1,
