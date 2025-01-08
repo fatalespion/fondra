@@ -1,11 +1,11 @@
 -- // Clear
 if Fondra.Functions.CleanUp then Fondra.Functions.CleanUp() end
 
-local Repository												= "https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/"
+local Repository												= "https://raw.githubusercontent.com/fatalespion/fondra/refs/heads/main/"
 
 local Library 													= loadstring(Fondra.Functions.SecureGet(Repository .. "Library.lua"))()
-local ThemeManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "addons/ThemeManager.lua"))()
-local SaveManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "addons/SaveManager.lua"))()
+local ThemeManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "ThemeManager.lua"))()
+local SaveManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "SaveManager.lua"))()
 
 do
     Fondra.Data.FOV                                             = Drawing.new("Circle")
@@ -1535,7 +1535,7 @@ SaveManager:SetIgnoreIndexes({})
 SaveManager:IgnoreThemeSettings()
 
 SaveManager:BuildConfigSection(Settings)
-ThemeManager:ApplyToTab(Settings)
+ThemeManager:BuildThemeSection(Settings)
 
 Library.SaveManager             = SaveManager
 Library.ThemeManager            = ThemeManager
