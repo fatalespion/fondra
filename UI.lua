@@ -29,7 +29,8 @@ task.spawn(function()
 	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 	ScreenGui.DisplayOrder = 99999999
 	ScreenGui.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-
+	ScreenGui.ResetOnSpawn = false
+		
 	TextLabel.Parent = ScreenGui
 	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel.BackgroundTransparency = 1.000
