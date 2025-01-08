@@ -1640,28 +1640,28 @@ local Index; Index                                             	= hookmetamethod
 	return Index(Self, Value)
 end)
 
-hookfunction(Config, function(Tool)
-	local GunData                                               = {}
-	local Config                                                = require(WaitForChild(Tool, "Config"))
+--hookfunction(Config, function(Tool)
+--	local GunData                                               = {}
+--	local Config                                                = require(WaitForChild(Tool, "Config"))
 
-	for Index, Value in next, Config do
-		if (Index == "Recoil") or (string.find(Index, "_Max")) or (string.find(Index, "_Min")) then
-			GunData[Index]                                      = Value * (Options.RecoilPercentage.Value / 100)
+--	for Index, Value in next, Config do
+--		if (Index == "Recoil") or (string.find(Index, "_Max")) or (string.find(Index, "_Min")) then
+--			GunData[Index]                                      = Value * (Options.RecoilPercentage.Value / 100)
 
-			continue
-		end
+--			continue
+--		end
 
-		if (Index == "Spread") then
-			GunData[Index]                                      = Value * (Options.SpreadPercentage.Value / 100)
+--		if (Index == "Spread") then
+--			GunData[Index]                                      = Value * (Options.SpreadPercentage.Value / 100)
 
-			continue
-		end
+--			continue
+--		end
 
-		GunData[Index]                                          = Value
-	end
+--		GunData[Index]                                          = Value
+--	end
 
-	return GunData
-end)
+--	return GunData
+--end)
 
 Fondra.Hooks.Namecall                                           = Namecall
 Fondra.Hooks.NewIndex                                           = NewIndex
