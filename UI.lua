@@ -1,11 +1,11 @@
 -- // Clear
 if Fondra.Functions.CleanUp then Fondra.Functions.CleanUp() end
 
-local Repository												= "https://raw.githubusercontent.com/lncoognito/Linoria/main/"
+local Repository												= "https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/"
 
 local Library 													= loadstring(Fondra.Functions.SecureGet(Repository .. "Library.lua"))()
-local ThemeManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "Addons/ThemeManager.lua"))()
-local SaveManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "Addons/SaveManager.lua"))()
+local ThemeManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "addons/ThemeManager.lua"))()
+local SaveManager 												= loadstring(Fondra.Functions.SecureGet(Repository .. "addons/SaveManager.lua"))()
 
 do
     Fondra.Data.FOV                                             = Drawing.new("Circle")
